@@ -1,0 +1,30 @@
+{
+  "name": "uvgrab-api",
+  "version": "0.1.0",
+  "authors": [
+    "ctopjian"
+  ],
+  "description": "mashup-api-to-create-movie",
+  "license": "MIT",
+  "homepage": "charlietopjian.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.0",
+    "jquery": "~2.1.1",
+    "fontawesome": "~4.3.0",
+    "handlebars": "~1.3.0",
+    "owlcarousel": "~1.3.2",
+    "typeahead.js": "~0.10.5",
+    "isotope": "~2.1.0"
+  },
+  "devDependencies": {
+    "owl.carousel": "*"
+  }
+}

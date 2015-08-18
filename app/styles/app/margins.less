@@ -1,0 +1,24 @@
+/*
+ *  Custom LESS for the APP
+ *  
+ */
+
+@body-top-margin: 68px;
+@body-top-margin-xs:  68px;
+body {
+  margin-top: @body-top-margin;
+
+	@media(max-width: @screen-xs-min) {
+		margin-top: @body-top-margin-xs;
+	}
+
+	@media only screen 
+	and (min-device-width: 768px)
+	and (max-device-width: 1024px)
+	{
+	   margin-top: 68px;
+	}	
+
+}
+
+

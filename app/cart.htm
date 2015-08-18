@@ -1,0 +1,295 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Bootstrap 101 Template</title>
+    
+  <link href="assets/app.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand"></a>
+          
+       
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+    
+          
+        </div> <!-- not in collapse -->
+        <div class="navbar-collapse collapse" id="navbar-main">
+              
+              <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-lg-4">
+                            <ul class="nav navbar-nav">            
+                              <li><a href="#" >New</a></li>
+                              <li><a href="#" >On Sale</a></li>
+                              <li><a href="#" >Coming Soon</a></li>  
+                              <li><a href="#" >All</a></li>                         
+                            </ul>
+                    </div>
+                    <div class="col-xs-12 col-lg-3 visible-lg">
+                              <div class="navbar-form text-center">   
+                                    <div class="input-group">
+                                          <input type="text" class="form-control col-xs-12 col-lg-4 typeahead" placeholder="Search Movie...">
+                                          <span class="input-group-btn">
+                                          <button class="btn btn-default"><i class="fa fa-search"></i></button>
+                                          </span>
+                                    </div>
+                              </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-lg-3 pull-right">
+                            <ul class="nav navbar-nav navbar-right">
+                              <li><a href="#" ><i class="fa fa-comments-o"></i> Help</a></li>
+                              <li>
+                                    <a href="#" >
+                                          <i class="fa fa-shopping-cart"></i> [$0.00]
+                                    </a>
+                              </li>                         
+                            </ul> 
+                    </div>                                        
+              </div>
+            
+        </div>
+      </div>
+    </div>
+
+  <!-- facebook sdk -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=850326001677615&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>  
+  <!-- facebook sdk end -->
+
+    <!-- Name space -->
+    <div id="cartNs">
+
+      <div class="container-fluid">
+        <div class="row"> <!-- could be container -->
+
+          <div class="col-xs-12 col-md-9 ">
+
+            <div class="cart-container"><!-- cart container -->
+            
+              <div class="panel panel-cart">
+                <div class="panel-heading">
+                  <div class="panel-title">
+                    <h3><i class="fa fa-cart-arrow-down"></i> Cart</h3>
+                  </div>
+                </div>
+                <div class="panel-body">
+
+                <div class="table-responsive">
+                  <!-- item tabular list -->
+                  <table class="table table-condensed cart-table">
+                    <tr class="header">
+                      <th class="col-xs-2">&nbsp;</th>
+                      <th class="col-xs-1">options</th>
+                      <th class="col-xs-1">Price</th>
+                      <th class="col-xs-1">Quantity</th>
+                      <th class="col-xs-1">Total</th>
+                      <th class="col-xs-1">&nbsp;</th>
+                    </tr>
+                    <tr>
+                      <td class="col-xs-2 item-img">
+                       <div class="item-title">The Hobbit: Desolation of Smaug</div>
+                       <img src="//cdn.shopify.com/s/files/1/0493/8681/products/teenage-mutant-ninja-turtles-uvcodes_small.jpg?v=1419030185" />
+                      </td>
+                      <td class="col-xs-1 item-icons">
+                        <div class="uv-icon"></div> <div class="hd-icon"></div>
+                      </td>
+                      <td class="col-xs-1 item-cost">$5.99</td>
+                      <td class="col-xs-1 item-quantity-input">
+                        <input type="tel" class="form-control">
+                      </td>
+                      <td class="col-xs-1 item-line-total">
+                        $11.98
+                      </td>
+                      <td class="col-xs-1 item-cart-remove">
+                        <button class="btn btn-sm btn-default">remove</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="col-xs-2 item-img">
+                       <div class="item-title">The Hobbit: Desolation of Smaug</div>
+                       <img src="//cdn.shopify.com/s/files/1/0493/8681/products/teenage-mutant-ninja-turtles-uvcodes_small.jpg?v=1419030185" />
+                      </td>
+                      <td class="col-xs-1 item-icons">
+                        <div class="uv-icon"></div> <div class="hd-icon"></div>
+                      </td>
+                      <td class="col-xs-1 item-cost">$5.99</td>
+                      <td class="col-xs-1 item-quantity-input">
+                        <input type="number" class="form-control">
+                      </td>
+                      <td class="col-xs-1 item-line-total">
+                        $11.98
+                      </td>
+                      <td class="col-xs-1 item-cart-remove">
+                        <button class="btn btn-sm btn-default">remove</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="col-xs-2 item-img">
+                       <div class="item-title">The Hobbit: Desolation of Smaug</div>
+                       <img src="//cdn.shopify.com/s/files/1/0493/8681/products/teenage-mutant-ninja-turtles-uvcodes_small.jpg?v=1419030185" />
+                      </td>
+                      <td class="col-xs-1 item-icons">
+                        <div class="uv-icon"></div> <div class="hd-icon"></div>
+                      </td>
+                      <td class="col-xs-1 item-cost">$5.99</td>
+                      <td class="col-xs-1 item-quantity-input">
+                        <input type="number" class="form-control">
+                      </td>
+                      <td class="col-xs-1 item-line-total">
+                        $11.98
+                      </td>
+                      <td class="col-xs-1 item-cart-remove">
+                        <button class="btn btn-sm btn-default">remove</button>
+                      </td>
+                    </tr>                      
+
+                    <!-- static bottom -->
+                    <tr class="static-controls">
+                      <td class="col-xs-2">&nbsp;</td>
+                      <td class="col-xs-1">&nbsp;</td>
+                      <td class="col-xs-1">&nbsp;</td>
+                      <td class="col-xs-1">
+                        <button class="btn btn-block btn-success">Update</button>
+                      </td>
+                      <td colspan="2" class="col-xs-2 cart-sub-total">
+                        $23.96
+                      </td>
+                      
+                    </tr>                     
+                    <!-- static bottom -->               
+                  </table>
+                  <!-- item tabular list end -->
+                </div>
+
+                </div>
+              </div>
+
+              <div class="row hidden-xs"> 
+                <div class="col-xs-12 col-sm-4 col-sm-offset-8">
+                  <div class="checkout-controls">
+                    <button class="btn btn-info btn-block btn-lg">Checkout <i class="fa fa-arrow-circle-right"></i></button>
+                  </div>
+                </div>
+              </div>
+              
+            </div><!-- cart container end -->
+
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <!-- misc items to right -->
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-12">
+                  <div class="right-container">
+
+                    <div class="panel panel-amazon">
+                      <div class="panel-heading">
+                        <div class="panel-title">
+                          Do you have questions about us? <a href="http://uvgrab.com/pages/uvgrab-help-and-support" target="_blank">HELP PAGE</a>
+                        </div>                        
+                      </div>
+                      <div class="panel-body">
+                        <div class="how-it-works-img"></div>                      
+                      </div>
+                      <div class="panel-footer">
+                        <div class="payment-icons"></div>
+                      </div>
+
+                    </div>
+
+                  </div>                
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-12">
+                    <div class="right-container">
+
+                      <div class="panel panel-amazon">
+                        <div class="panel-heading">
+                          <div class="panel-title">
+                            &nbsp;
+                          </div>                        
+                        </div>
+                        <div class="panel-body text-center">
+                          
+                          <!-- ad space -->
+                          <a href="http://click.linksynergy.com/fs-bin/click?id=Uf59UXKdmP0&offerid=251672.38&subid=0&type=4"><IMG border="0"   alt="vudu.com" src="http://ad.linksynergy.com/fs-bin/show?id=Uf59UXKdmP0&bids=251672.38&subid=0&type=4&gridnum=13"></a>                  
+                          <!-- add space -->
+
+                        </div>
+                        <div class="panel-footer">
+                          Watch your movies in the cloud!
+                        </div>
+
+                      </div>
+
+                    </div>              
+                </div>
+
+
+              </div>
+            <!-- misc items right -->
+          </div>
+
+        </div> <!-- row1 -->
+        <div class="row">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <div class="fade-hr"></div>
+            <div class="suggestion-row">
+
+              test
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- name space end -->
+    
+
+
+
+    <div class="container">
+        <nav class="visible-xs-block navbar navbar-default navbar-fixed-bottom" style="margin:0; margin-bottom:0; border-bottom:0; background:#3F3F3F; padding:0;">
+            <div class="navbar-inner navbar-content-center">
+
+                  <div class="row">
+                    <div class="col-xs-12 text-center">
+                      <button class="btn btn-info btn-block btn-lg">Checkout <i class="fa fa-chevron-circle-right"></i></button>
+
+                    </div>
+                  </div>
+
+            </div>
+        </nav>
+    </div> 
+
+    
+
+
+    
+	<script src="assets/app.js"></script>	 
+  
+  </body>
+</html>

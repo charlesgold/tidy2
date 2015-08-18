@@ -1,0 +1,265 @@
+/**
+* Less for Cart
+**/
+
+#cartNs {
+
+	margin-bottom: 50px;
+
+	.payment-icons {
+		background: url("@{assets-url}payment-icons.png");					
+		background-size: 173px 18px;	
+		background-position: center center;
+		background-repeat: no-repeat;
+		height: auto;
+		min-height: 18px;		
+	}
+
+//*** Ads and Help side of Row
+	.right-container {
+		padding-top: 15px;
+
+		.well-custom {
+			padding:8px;
+			border-radius: 8px;
+			min-height: 50px;
+			background: #303030;
+			overflow-x: hidden;
+		}
+
+		.panel-amazon {
+			margin-bottom: 0;
+			background: transparent;
+			box-shadow: none;
+			border:0;
+			border-radius: 8px;
+
+			.responsive(768px,{
+				//margin-top:10px;	
+			});
+			
+			.panel-heading {
+				background:#828282;
+				padding:5px 10px;
+				border-radius: 8px 8px 0 0;
+				
+				.panel-title {
+					color:#fff;
+					font-size: 14px;
+					text-align: center;
+					i { color: #FFF;}
+					h1,h2,h3,h4,h5{
+						font-family: "Ubuntu Mono", sans-serif;
+						text-shadow: none;
+					}
+					a {
+						color:@uv-pink;
+						font-weight: bold;
+					}
+				}
+			}
+
+			.panel-body {
+				background:#FFF;				
+				border: 3px solid #828282;
+				border-top:0;
+			}
+			.panel-footer {
+				border:0;
+				background: #828282;
+				border-radius: 0 0 8px 8px;
+				padding: 5px 10px;
+				color:#ffffff;
+				text-align: center;
+				min-height: 30px;
+			}	
+		}	
+
+		.how-it-works-img {
+			background: url("@{assets-url}how-it-works-square-600.jpg");
+						
+			background-size: 300px 250px;	
+			background-position: center center;
+			background-repeat: no-repeat;
+			height: auto;	
+			min-height: 250px;
+			max-width: 300px;
+			margin:0 auto;
+	
+		}
+	}
+
+//*** CART SIDE OF ROW
+	.cart-container {
+		padding-top: 15px; 
+	}
+
+	.panel-cart {
+		margin-bottom: 0;
+		background: transparent;
+		box-shadow: none;
+		border:0;
+		border-radius: 8px;
+
+		.responsive(768px,{
+			//margin-top:10px;	
+		});
+		
+		.panel-heading {
+			background:#3F3F3F;
+			padding:5px 10px;
+			border-radius: 8px 8px 0 0;
+			.panel-title {
+				text-align: center;
+				i { color: #FFF;}
+				h1,h2,h3,h4,h5{
+					font-family: "Ubuntu Mono", sans-serif;
+					text-shadow: none;
+				}
+			}
+		}
+		.panel-title {
+			font-size:12px;
+			color: #ffffff;
+		}
+		.panel-body {
+			background:#FFF;
+			border-radius: 0 0 8px 8px;
+			border: 3px solid #3F3F3F;
+			border-top:0;
+
+		}
+	} //cart end
+
+	.table-responsive {
+		border: 0;
+		.responsive(414px,{			
+			border-radius: 8px;
+			border-bottom: 1px solid #303030;
+			border-right:3px solid #303030;
+		});
+		
+	}
+
+	//Cart table (responsive)
+	.cart-table {
+
+
+		th {
+			text-align: center;
+			border: 0;
+		}
+		th:first-child {
+			border-radius: 8px 0 0 0;
+		}
+		th:last-child {
+			border-radius: 0 8px 0 0;
+		}
+
+		td {
+			vertical-align: middle;
+			border-top: 0;
+						
+		}
+
+
+		tr:nth-child(odd) {
+			background: #FFF;
+			td {
+				border-top: 2px solid #9B9A9A;
+				border-bottom: 2px solid #9B9A9A;
+
+			}		
+		}
+
+		tr:first-child {
+			background: #9E0FFF;
+			color:#fff;
+					
+		}
+
+		tr.header {
+			td {
+				border: 0;
+			}
+		}
+
+		tr.static-controls {
+			
+			td {
+				padding-top:15px;
+				border: 0;
+			}			
+		}
+	}
+	//end of cart table
+
+	//tabular formatting
+	.item-img {
+		text-align: center;
+	}
+	.item-title {
+
+		color: #000;
+		font-weight: bold;
+		padding-bottom:10px;
+		text-align: center;
+		.responsive(768px,{
+			font-size: 11px;	
+		});
+	}	
+
+	.item-icons {
+		vertical-align: middle;
+		text-align: center;  
+	}
+
+	.item-cost {
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	.item-quantity-input {
+		text-align: center;		
+	}
+
+	.item-line-total {
+		text-align: center;
+	}
+	.item-cart-remove {
+		text-align: center;
+	}
+
+	.cart-sub-total {
+		font-size:20px;
+		color:#9E0FFF;
+		text-align: center;
+	}
+	//end of tabular formatting
+
+	.checkout-controls {
+
+		margin-top:15px;
+
+		.responsive(414px,{
+
+		});
+	}
+
+	//Suggestion row
+	.fade-hr {
+		margin-top:25px;
+		height: 2px;		
+		background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(147,147,147,1) 50%,rgba(0,0,0,0) 100%);			
+		
+	}
+
+	.suggestion-row {
+		margin-top:15px;
+		padding: 25px 0;
+	}
+	.form-control {
+		border: 2px solid #828282;
+	}
+
+}

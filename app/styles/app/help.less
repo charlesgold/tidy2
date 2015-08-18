@@ -1,0 +1,415 @@
+h1,h2,h3,h4 {
+	text-shadow: none;
+}
+
+/* 
+mixin 
+http://goo.gl/KJfrMH
+*/
+.responsive(@maxWidth; @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+.responsiveMin(@minWidth; @rules) {
+    @media only screen and (min-width: @minWidth) {
+        @rules();
+    }
+}
+
+.headerSize(@size: 1){
+	font-size: floor((@font-size-base * @size));
+}
+
+#helpNs {
+
+
+	/* vars */
+
+	/* selectors */
+	a, h1, h2, h3, p {
+		font-family: 'Roboto', sans-serif;		
+		text-shadow: none;		
+	}
+	h1 {
+		.headerSize(3);
+	}
+	h2 {
+		.headerSize(2);
+	}
+	small {
+		font-family: 'Ubuntu', sans-serif;
+		font-size: floor((@font-size-base * 1.5));
+		font-style: italic;
+	}	
+
+	.help-section-one {
+		background: url("@{assets-url}help-top-banner-portable.jpg");
+		background-size: cover;	
+		background-position: center center;
+		background-repeat: no-repeat;
+		height: auto;
+		min-height: 275px;
+
+		.responsiveMin(1000px,{
+			background: url("@{assets-url}help-top-banner.jpg");
+			background-size: cover;	
+			background-position: center center;
+			background-repeat: no-repeat;		
+			min-height: 619px;
+		});
+
+
+		.help-attention {
+
+			margin-top:203px;
+			padding:10px 0;
+			background: #303030;
+			opacity: .8;
+			/* IE 8 */
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+			/* IE 5-7 */
+			filter: alpha(opacity=50);		
+			border-radius: 8px;
+			h1{
+				color: #FFFFFF;	
+				
+			}
+
+			.responsive(320px,{
+				margin-top:10px;
+			});
+			.responsive(375px,{
+				margin-top:10px;
+			});
+			.responsive(414px,{
+				margin-top:10px;
+			});
+			.responsive(768px,{
+				margin-top:90px;
+			});		
+			
+		}
+
+
+	}
+
+
+	/* FAQ and contact */
+	.help-section-two-title {
+		background:#6505A6;	
+		padding-top: 0;	
+		border-top: 5px solid #8939BF;
+		border-bottom:5px solid #8939BF;
+		h2 {
+			color:#fff;
+			font-style: italic;
+			margin:8px 0;
+		}
+		
+
+	}
+	.help-section-two {
+		background: #FFFFFF;
+		min-height: 275px;
+
+		.responsiveMin(1000px,{				
+			min-height: 619px;
+		});
+
+		.faq-info {
+
+		}
+			.anonymox {
+				background: url("@{assets-url}anonymox.jpg");
+				background-repeat: no-repeat;
+				background-position: center;
+				min-height: 261px;
+				min-width: 272px;
+			}		
+		.faq-container {
+			padding: 20px 0;
+
+			.faq-strong {
+				color:#FFF;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.label {
+				text-shadow: none;
+			}
+
+			/* list-group stuff */
+			li.list-group-item:nth-child(odd) {
+				background:#fff;
+			}
+
+			.panel-heading {
+				transition: background-color 1s;
+
+				.panel-title {
+					font-size: @font-size-h3;
+					a {
+						min-width:300px;
+					}
+				}
+			}
+			
+			.panel-default {
+				.panel-heading:hover {
+					background-color: #000;					
+				}	
+			}
+			.panel-help-odd {
+				.panel-heading:hover {
+					background-color: #e8008f;
+				}
+			}		
+			
+		} /* faq container */
+
+		.qA-container {
+
+			padding: 10px 0;
+
+			.qA-filler {
+				background-image: url("@{assets-url}q-n-a.jpg");
+				background-position: center;
+				background-repeat: no-repeat;
+				min-width: 320px;
+				min-height: 320px;
+				border-radius: 50%;
+			}
+
+			.responsiveMin(768px, {
+				padding: 80px 0 20px 0;
+			});
+		}
+
+
+	} /* help section */
+
+
+	/* help-section-three */
+	.help-section-three-title {
+		min-height: 50px;
+		background-color: #ffffff;
+	}
+
+	.help-section-three {
+		background: #fff;
+		border-top: 2px solid #303030;
+		min-height: 300px;
+
+
+		.responsiveMin(1000px,{				
+			min-height: 619px;
+		});
+
+
+		.contact-container {
+
+			padding: 10px 0;
+
+			h1,h2,h3,h4 {
+				text-shadow: none;
+			}
+
+			.help-complete {							
+				display: none;
+				height: 100px;
+				max-height: 100px;
+
+				h1,h2,h3,h4, h5 {
+					text-shadow: none;
+				}
+				.supportInfo {
+					background:#303030;
+					color:#fff;
+					border-radius: 5px;	
+					border-top: 2px solid #303030;
+					margin-top:10px;
+					padding: 10px 0;
+					p {
+						color: #CCC;
+					}
+					span {
+						color: #FFF;
+						font-size: @font-size-base;
+					}
+				}				
+			}
+
+			.push-me {
+				margin-top:20px;
+			}
+			.my-line {
+				border-top: 1px solid #303030;
+				max-width: 100%;				
+			}
+			
+			
+			.form-control {
+				margin-top: 6px;
+				border:3px solid #74A600;
+
+				.responsiveMin(1000px,{
+					margin-top: 15px;
+				});
+			}
+			.err-state {
+				border: 3px solid #FF0013;
+			}
+			.err-state-block {
+				display: none;
+			}			
+			
+
+			.responsiveMin(1000px, {
+				padding: 80px 0 20px 0;
+			});
+			
+		} /*contact container */
+
+		.social-container {
+			padding: 10px 0;
+
+			.social {
+				display: block;				
+				background-repeat: no-repeat;				
+				background-size: contain;							
+				width: 256px;
+				height: 256px;
+			}
+			.social-fb {
+				.social;
+				background-image: url("@{assets-url}social-facebook.svg");
+			}
+
+			.responsiveMin(1000px, {
+				margin-top: 100px;
+
+			});
+
+		}
+
+	}
+
+
+	.help-section-four-title {
+		padding:10px 0 20px 0;		
+		border-top: 2px solid #303030;
+		min-height: 80px;
+
+		h1 {
+			color:#BF308A;
+		}		
+	}
+	.help-section-four {
+		min-height: 300px;
+		padding-bottom:10px;
+		overflow: hidden;
+
+		.provider-tile(@img-name) {
+			background-image: url("@{assets-url}@{img-name}");
+			display: block;
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: 200px;
+			width: 200px;
+			min-width: 200px;
+			min-height: 200px;
+			margin: 0 auto;		
+
+			.responsive(999px,{
+				border-bottom:2px solid #303030;
+				margin-top:10px;
+			});
+			.responsiveMin(1000px, {
+				margin-top:20px;
+				&:hover {
+					border-bottom: 2px solid #303030;
+				}				
+			});
+		}
+
+
+		.mgo {
+			.provider-tile('uvp-mgo.png'); 			
+		}
+		.vudu {
+			.provider-tile('uvp-vudu.png');			
+		}
+		.flixster {
+			.provider-tile('uvp-flixster.png');
+		}
+		.target {
+			.provider-tile('uvp-target.png');
+		}
+		.blinkbox {
+			.provider-tile('uvp-blinkbox.png');
+		}
+		.cinemanow {
+			.provider-tile('uvp-cinemanow.png');
+		}
+
+	}
+
+	/* help section three end */
+	.footer-section {
+		background: #303030;
+		min-height: 50px;
+
+	}
+
+	/* styles */
+
+	.panel-help-odd {
+		.panel-heading{
+			background:#FF00A0;
+			a, span, i, small {
+				color: #fff;
+			}			
+		}
+	}
+
+
+
+		
+	.panel.panel-help-contact {
+		border: 5px solid #74A600;
+		border-radius: 8px;
+		.panel-heading {
+			background: #B3FF00;
+			color: #303030;
+			
+			font-weight: bold;
+			i {
+				color: #303030;
+			}
+		}
+		.panel-body {
+			background:#fff;
+		}
+	}		
+			
+	
+	
+
+		
+	
+	
+
+
+	section {
+		padding-bottom: 20px;
+	}
+
+
+
+	.helpTop {
+		
+		max-height: 200px;
+	}
+
+}

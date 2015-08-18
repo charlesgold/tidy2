@@ -1,0 +1,340 @@
+/**
+ *   UVGrab Product.less
+ */
+
+
+  /* mixin */
+   .shadow {
+     box-shadow:  0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+   }
+
+
+
+.details-section {
+    background:@gray;
+    
+    margin-top:0px; /*changed 11.18.14 */
+    border-radius: 0;
+    padding: 0 0 10px 0;
+    /*min-height: 25px;*/
+   margin-bottom: 15px;
+   border-bottom: 5px solid @gray-light;
+    
+    
+    /* well attributes to mimic */
+    min-height: 20px;
+    -webkit-box-shadow: inset 1px -1px 34px -14px rgba(0,0,0,1);
+    -moz-box-shadow: inset 1px -1px 34px -14px rgba(0,0,0,1);
+    box-shadow: inset 1px -1px 34px -14px rgba(0,0,0,1);
+    
+  h1 {
+    color: #fff;
+    font-size: @font-size-h2;
+    word-wrap: break-word;
+  }    
+  
+  p.product-description {
+    
+    text-align: justify;
+    padding: 5px;
+    border-radius: 5px;
+    .shadow;
+  }
+  
+  span.buy-or {
+    font-size: @font-size-h5;
+    vertical-align: -3px;
+    border-right: 2px solid @gray;
+    padding-left: 5px;
+    margin-right: 10px;
+  }
+  
+  /* iPhone 6 Plus */  
+  @media only screen
+    and (max-device-width: 736px)  {
+      overflow-x: hidden;
+    margin-top:-18px;
+    border-top: 3px solid @brand-success;
+    padding-top: 2px;
+    
+    h1 {
+      font-size: 22px; 
+      margin-top: 5px; 
+    }
+
+      div.product-img-container {
+        padding-right:5px;
+      }
+   
+    
+  }
+  
+  /* iphone 4-5 */  
+  @media only screen
+    and (max-device-width: 320px)  { 
+      overflow-x: hidden;
+      h1 {   
+      font-size: @font-size-h4;
+      text-align:left;    
+      margin-top:5px;      
+      } 
+      
+      div.product-img-container {
+        padding-right:5px;
+      }
+      
+      .visible-xs-block {
+        
+      }
+      
+    }  
+
+
+
+  
+} /* end of details-section */
+
+  .mobile-sub-container {
+    padding-top:10px;
+  }
+
+
+
+   
+
+
+    .panel-custom {
+      .panel-body{
+        padding: 5px;
+        min-height: 38px;
+        
+      }
+      .panel-footer {
+        padding: 3px;
+        text-align:center;
+        font-size: 12px;
+        .shadow;
+      }      
+    }
+
+
+  
+  .product-icons-mobile {
+    .list-inline {
+      li {
+        margin-left: -5px;
+      }
+      
+      i {
+        margin-bottom: -5px;
+          @media only screen
+          and (max-device-width: 736px){
+            margin-left: -10px;  
+            &.first {
+              margin-left: 0;
+            }
+          }
+            
+      }      
+      
+    }
+  }   
+   
+   
+  .icon-group {    
+    padding: 5px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    min-height: 38px;
+    .shadow;
+  }
+  .icon-group-dark {
+    .icon-group;
+    background: @brand-primary;
+  }
+  .icon-group-light {
+    .icon-group;
+    background: @gray-lighter;
+  }
+
+  
+
+   
+  .rating-element {
+    max-height: 20px;
+    min-height: 20px;
+    min-width:40px;
+    background: @uv-white;
+    padding: 3px 10px;
+    font-size: @font-size-base;
+    font-weight:  bold;
+    color: #000;
+    display: inline;
+    margin: 0;
+    border-radius: 4px;   
+    vertical-align:2px; 
+    .shadow;
+    @media only screen
+    and (max-device-width: 736px)  
+     {
+       vertical-align:top;
+      display: inline-block;
+      font-size: 12px;
+      padding: auto;
+      min-height: 20px;
+      max-height: 20px;
+     /* max-width: 30px; */
+      text-align: center;
+    }
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : landscape) { 
+      
+    }    
+
+  }
+
+  .uvgrab-icon {
+    background-image: url("@{assets-url}uv-logo-tiny.png");
+    min-width: 23px;
+    min-height: 23px;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+  }
+
+
+  
+  .buy-on-vudu {
+    background-image: url("@{assets-url}buy-on-vudu.png");
+    background-repeat: no-repeat;
+    min-width: 78px;
+    min-height: 27px;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    cursor:pointer;
+    border-radius: 4px;
+    .shadow;
+  }
+
+  .buy-on-itunes {
+    background-image: url("@{assets-url}buy-on-itunes.png");
+    background-repeat: no-repeat;
+    min-width: 72px;
+    min-height: 26px;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    cursor:pointer;    
+    .shadow;
+  }
+  
+  .itunes-icon {
+    background-image: url("@{assets-url}badge_itunes-sm.png");
+    min-width: 44 px;
+    width: 44px;
+    min-height: 15px;
+    display: inline-block;
+    margin: 0;
+    margin-left: 5px;
+    vertical-align: -3px;
+    .shadow;  
+      @media only screen
+      and (max-device-width: 736px) {
+        vertical-align: 3px;
+       }      
+  }
+  
+  .uv-icon {
+    background-image: url("@{assets-url}uv-logo.png");
+    min-width: 26px;
+    width: 26px;
+    min-height: 27px;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    //.shadow;
+      @media only screen
+      and (max-device-width: 736px) {
+          margin-right:5px;
+          margin-left: 5px;
+          vertical-align:-2px;
+      }        
+  }  
+  
+  .hd-icon {
+      background-image: url("@{assets-url}quality_hd_black.png");      
+      min-width:63px;
+      min-height:20px;
+      margin: 0;      
+      display: inline-block;
+      background-repeat: no-repeat;
+      vertical-align: -3px;
+      @media only screen
+      and (max-device-width: 736px) {
+         vertical-align:top;
+                    
+      }    
+  }
+  .hd-icon-white {
+    .hd-icon;
+    background-image: url("@{assets-url}quality_hd_white.png");
+  @media only screen
+    and (max-device-width: 320px)  { 
+      background-image: url("@{assets-url}quality_hd_white_sm.png");
+      max-width: 47px;
+      max-height: 15px; 
+      vertical-align: -2px;     
+    }
+  }      
+  .sd-icon {      
+      .hd-icon;
+      background-image: url("@{assets-url}quality_SD_black.png");  
+  @media only screen
+    and (max-device-width: 320px)  { 
+        background-image: url("@{assets-url}quality_sd_white_sm.png");
+      }              
+  }
+
+
+  .product-img {    
+      @media only screen 
+      and (min-device-width: 1024px){    
+          width:280px;
+          height:420px;
+      }
+      
+      /* iphone 6 - portrait */
+      @media only screen 
+      and (max-device-width: 375px)
+      and (orientation: portrait)  {
+          width:  140px;
+          height: 210px;          
+      }
+      /* iphone 6 - landscape */
+      @media only screen 
+      and (max-device-width: 667px)
+      and (orientation: landscape)  {
+          width:  186px;
+          height: 280px;          
+      }        
+      
+      
+      /* iphone 6 plus - portrait */
+      @media only screen 
+      and (max-device-width: 414px)
+      and (orientation: portrait)  {
+          width:  140px;
+          height: 210px;          
+      }
+      /* iphone 6 plus - landscape */
+      @media only screen 
+      and (max-device-width: 736px)
+      and (orientation: landscape)  {
+          width:  186px;
+          height: 280px;          
+      }              
+  }
+

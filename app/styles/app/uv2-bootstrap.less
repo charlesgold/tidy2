@@ -1,0 +1,89 @@
+/*
+ *  Custom LESS styles for UVGrab
+ * v0.1.0
+ * 
+ * ### Elements involved ###
+ * -panel
+ */
+
+.uvgrab {
+  color: #FF00A2;
+}
+/* ### PANEL ### */
+.panel {
+  .panel-heading {
+    background-color: @panel-heading-bg;
+      i {
+          color: @gray-light;
+      }
+      span {
+          //color: @gray-light;
+          font-size: @font-size-h4;
+          @media (max-width: @screen-xs-min) {
+            font-size: @font-size-h4/1.5;
+            font-weight: bold;
+          }          
+      }
+      a {
+        color:@gray-light;
+        text-decoration: none;
+      }
+  }
+}
+.panel-newrelease {
+  .panel-heading {
+    background-color:#8939BF;
+    a, span, i, small {
+      color: #fff;
+    }
+  }
+}
+
+.panel-sale {
+  .panel-heading {
+    background-color:#B3FF00; 
+    a, span, i, small {
+      color: #ffffff;
+    }
+  }
+}
+
+
+.navbar {
+  padding-left:5px;  
+  padding-bottom:0;
+  border-width: 0 0 3px 0;
+  border-color: @brand-success; 
+  .container-fluid {
+    
+  }
+  @media(max-width: @screen-xs-min){
+    margin-bottom:1px;
+    border-width: 0 0 1px 0;  
+  }
+  @media(max-width: @screen-sm-min){
+    margin-bottom:2px;
+    border-width: 0 0 2px 0;    
+  }
+}
+
+@media(max-width: @screen-xs-min){
+  .navbar-fixed-top {
+    //position:relative;  //fixes the push down of navbar
+  }  
+
+}
+
+@media only screen 
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+{
+    .navbar-fixed-top {
+      //position:relative;  //fixes the push down of navbar
+    }  
+}
+
+
+
+
+

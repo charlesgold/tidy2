@@ -1,0 +1,133 @@
+/*
+ * owl carousel theme LESS
+ * specifically the NAV Controls customized
+ */
+#test-carousel .item {
+  display:block;
+  padding:30px 0px;
+  margin:5px;
+  color:#ffffff;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  text-align:center;
+}
+.owl-theme {
+  .owl-controls {
+    .owl-nav{
+      top:0;
+      left:0;
+      padding:0;
+      margin:0;
+    }
+  }
+}
+
+
+.flag-defaults {
+  border-radius: 0px;
+  opacity: 0.8;
+  width:50%;
+  text-align: center;
+  color:#fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;  
+    padding-bottom:0;
+    z-index:3;
+}
+.product-wrapper {
+  position:relative;
+  z-index: 1;
+  img {
+    position: relative; 
+    z-index:2;
+  }  
+  .sale-flag {
+    background: #D43699;
+    .flag-defaults;
+  }  
+  .sold-out-flag {
+    background:#FFFB41;
+    .flag-defaults;
+    color: #888;
+  }
+  .sd-flag {
+    background: #BDF33E;
+    .flag-defaults;
+    color:#888;
+  }
+  .soon-flag {
+    background: #CCC;
+    .flag-defaults;
+    color:#fff;
+  }
+}
+  
+
+
+
+.owl-theme {
+  .owl-controls {
+    .owl-dots {
+      
+      width: 100%;
+      background: #fff;
+      z-index: 999;
+    }
+
+    .owl-nav {
+      div {
+      position: absolute;
+      }
+      .owl-prev {
+        left: 0px;
+        top:  0px;
+        background: transparent;
+        color: #CCC;  
+        height:100%;
+        width:50px;
+        &:hover {
+          transition: background .5s ease;
+          background: rgba(0,0,0,.5);
+        }   
+                 
+            .fa-middle {
+                position: absolute;
+                height: 71px;
+                top: 40%;
+                padding: 0 5px 0 5px;       
+                color:#fff; 
+          }
+      }
+
+      .owl-next {
+        right: 0px;
+        top:  0px;
+        background: transparent;
+        color: #CCC;  
+        height:100%;
+        width:50px;
+        &:hover {
+          transition: background .5s ease;
+          background: rgba(0,0,0,.5);
+        }   
+                 
+            .fa-middle {
+                position: absolute;
+                height: 71px;
+                top: 40%;
+                padding: 0 5px 0 5px;       
+                color:#fff; 
+          }
+      }
+
+      
+    }
+  }
+}
+
+
+.owl-theme .owl-buttons i {
+  margin-top:2px;
+}

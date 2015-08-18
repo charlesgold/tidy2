@@ -1,0 +1,22 @@
+﻿help pages
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch pigs
+# Changes to be committed:
+#	modified:   Gruntfile.js
+#	modified:   app/help.htm
+#	modified:   app/styles/app/help.less
+#
+# Untracked files:
+#	app/img/anonymox.jpg
+#	app/img/q-n-a.jpg
+#	app/img/social-facebook.svg
+#	app/img/social-google.svg
+#	app/img/uvp-blinkbox.png
+#	app/img/uvp-cinemanow.png
+#	app/img/uvp-flixster.png
+#	app/img/uvp-mgo.png
+#	app/img/uvp-target.png
+#	app/img/uvp-vudu.png
+#
+
